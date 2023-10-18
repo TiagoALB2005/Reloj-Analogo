@@ -1,0 +1,87 @@
+*{
+    margin :0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* background-color: rgb(95, 98, 191); */
+    background: rgb(126,56,201);
+    background: linear-gradient(90deg, rgba(126,56,201,1) 0%, rgba(25,177,129,1) 54%, rgba(158,0,255,1) 100%);
+}
+.Reloj{
+    width: 350px;
+    height: 350px;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    background-image: url("/img/imagen.png");
+    background-size: cover;
+    border: 1rem solid rgb(60, 216, 161);
+    border-radius: 50vh;    
+    box-shadow: inset 0px 0px 20px 5px rgb(133, 84, 206);
+
+}
+   /*before me permite dibujar elementos dentro del contenedor  */
+   .Reloj::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(18, 128, 187);
+    border-radius: 50vh;
+    z-index: 10000;
+}
+
+.hora{
+    width: 150px;
+    height: 150px;
+}
+
+.minuto{
+    width: 150px;
+    height: 150px
+}
+
+.segundo{
+    width: 150px;
+    height: 150px
+}
+ .hora::before{
+        content:'' ;
+        position: absolute;
+        width: 8px;
+        height: 90px;
+        background-color: rgb(39, 30, 219);
+        z-index: 10;
+        border-radius: 50vh;
+    }
+ 
+    .minuto::before{
+        content:'' ;
+        position: absolute;
+        width: 5px;
+        height: 130px;
+        background-color: rgb(213, 10, 23);
+        z-index: 10;
+        border-radius: 50vh;
+    }
+
+    .segundo::before{
+        content: '';
+        position: absolute;
+        width: 1.8px;
+        height: 150px;
+        background: rgb(223, 195, 15);
+        z-index: 12;
+        border-radius: 50vh;
+    }
+    .hora,.minuto,.segundo{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        border-radius: 50vh;
+    }
